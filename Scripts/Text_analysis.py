@@ -9,8 +9,9 @@ def tokenize(text):
     return [word for word in tokens if word.isalpha() and word not in stops]
 
 def get_most_common_words(df):
-    all_unigrams = Counter(w for toks in df["tokens"] for w in toks)
-    return all_unigrams
+    all_ticket_unigrams = Counter(w for toks in df["tokens"] for w in toks)
+    all_resolution_unigrams = Counter(w for toks in df["resolution tokens"] for w in toks)
+    return all_ticket_unigrams, all_resolution_unigrams
 
 def get_most_common_bigrams(df):
     all_bigrams = Counter()
