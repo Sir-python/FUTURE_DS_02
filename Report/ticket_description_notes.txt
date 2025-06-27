@@ -1,0 +1,167 @@
+5 random ticket samples taken with their description and resolution
+
+Ticket Label: Refund request
+
+	Analyzing most descriptive ticket from the samples: Ticket 5
+	----------
+	Issue: Software bug → App crashes on specific action
+	Impact: Disrupts daily tasks
+	User Action: Requests fix or guidance
+	User Expectation: Solution or support, maybe refund if unresolved
+
+	Drilling down in the ticket:
+	Why open a refund request ticket -> Because their software keeps crashing and it disrupts their work.
+	Why is the software crashing during a specific action? -> Possibly due to bugs introduced in a recent update.
+	Why hasn't this bug been addressed/resolved yet? -> There may be no fix documented or no known patch.
+	Why wasn't the issue triaged or escalated properly? -> Possibly due to inconsistent ticket labelling or lack of technical detail in response workflows.
+	Why was the refund ticket label used for non-refund bugs -> Possibly due to users mislabelling tickets or wrong classification by agents.
+
+	Pattern across all refund request tickets:
+	Misclassification: Many tickets labeled “Refund Request” are actually technical support requests (bugs, usability, data loss).
+	Lacking Resolution: Missing or incoherent responses suggest either no support responses or lack of trained agents for handling technical issues.
+	Customer Tone: Users are frustrated and desperate, but not necessarily asking for refunds.
+
+	| Root Cause                                    | Evidence from Samples                                          |
+	| --------------------------------------------- | -------------------------------------------------------------- |
+	| Mislabeling of tickets                        | All 5 tickets report bugs, but are tagged as "Refund Requests" |
+	| Missing or poor-quality resolutions           | 3/5 have no resolution; 2/5 contain meaningless responses      |
+	| Unclear refund criteria or policy enforcement | Users may not know when to request a refund vs. report a bug   |
+	| No automated triaging or tagging process      | Bug-related keywords are present but not used for routing      |
+
+	Recommendations
+	Problem: Misclassified refund requests, Recommendation: Introduce keyword-based auto-tagging (e.g., "crash", "bug", "update")
+	Problem: Missing/incomplete resolutions, Recommendation: Implement mandatory resolution fields with review before closing
+	Problem: Poor support response quality, Recommendation: Create predefined templates or escalation paths for technical issues
+	Problem: Lack of refund policy visibility, Recommendation: Add visible refund policy plus decision tree for support agents
+
+Ticket Label: Technical issue
+
+	Analyzing most descriptive ticket from the samples: Ticket 3
+
+	Drilling down in the ticket:
+	Why did the customer open a “Technical Issue” ticket? -> They experienced a problem with their device that persisted even after a factory reset.
+	Why didn’t the factory reset fix their issue? -> Because the root cause isn’t in user-configurable settings; it’s likely a deeper software or hardware fault.
+	Why isn’t there clearer guidance on non-reset fixes? -> The knowledge base only covers basic resets; there’s no documented advanced troubleshooting for this error.
+	Why is the knowledge base so sparse on this error? -> Support docs might not have been updated since last release and there’s no feedback loop from support to docs.
+	Why isn’t support feeding back recurring issues into documentation? -> There’s no formal process or tool to capture “repeat‐fail” tickets and auto-flag them for documentation.
+
+	Pattern across all refund request tickets:
+	Generic, reset-focused descriptions
+	------------------------------------
+	Implications: Customers & agents default to “factory reset”, Root Cause: KB covers only basic resets; no guided intake form to gather specifics
+
+	Software vs. hardware confusion
+	---------------------------------
+	Implications: Mis-triaging between bug reports and hardware faults, Root Cause: No clear ticket-type definitions or symptom-based triage questions
+
+	Missing or incoherent resolutions
+	---------------------------------
+	Implications: Poor CX, frequent reopenings, Root Cause: No QA/templates for Tier-1 responses; resolution field left unchecked
+
+	No escalation triggers
+	---------------------------------
+	Implications: Critical bugs stall at Tier-1, Root Cause: Lack of automated keyword tagging or documented escalation workflows
+
+	No feedback loop into documentation
+	---------------------------------
+	Implications: Docs out-of-date; same issues keep recurring, Root Cause: No process/tool to aggregate unresolved tickets for doc/product updates
+
+	Recommendations:
+	Problem: KB only covers basic resets, Recommendation: Expand documentation with “Advanced Troubleshooting” guides for non-reset errors
+	Problem: No feedback loop from support to docs, Recommendation: Implement a “Doc-flag” tag on tickets that survive Tier-1 triage, auto-notifying your documentation team
+	Problem: Gibberish or missing resolutions, Recommendation: Enforce a mandatory “Resolution Quality” review step before closing any technical ticket
+
+Ticket Label: Cancellation request
+
+	Analyzing most descriptive ticket from the samples: Ticket 5
+
+	Issue: Software-related issue
+	Impact: Can not use the laptop at times
+	User Action: Updated firmware
+	User Expectation: Being able to use the laptop properly again
+
+	Drilling down in the ticket:
+	Why open the ticket? -> Because their device stopped working properly after the firmware update, and they fear it’s unusable.
+	Why is the updated firmware making the device unusable? -> The new firmware introduced a bug or incompatibility that causes the product to malfunction.
+	Why was this buggy firmware shipped to customers? -> Due to lack of sufficient compatibility testing on all supported hardware configurations before release.
+	Why wasn’t broader hardware testing part of the release process? -> The QA process focused only on core functionality and missed edge-case devices like this customer’s model.
+	Why does the QA process miss those edge-cases without escalation from support? -> Because there’s no formal feedback loop or tagging system to surface “post-update failures” back to QA.
+
+	Pattern across all refund request tickets:
+	Generic Issue Plea
+	-------------------
+	All tickets start with “I’m having an issue with the {product_purchased}. Please assist.”
+
+	Extraneous, irrelevant content
+	-------------------------------
+	Dates, tweets, code snippets, emojis, sighs—none bear on the cancellation itself.
+
+	Ambiguous cancellation threat
+	-------------------------------
+	“I have to decide between getting my laptop or not!” or “will be sold after this month.”
+
+	Missing or gibberish resolutions
+	---------------------------------
+	4/5 tickets have no documented resolution or just nonsense text.
+
+	Recommendations:
+	Problem: All tickets use a generic “help me” opener, obscuring real intent., Recommendation: Introduce a mandatory “Issue Type” selector (e.g. Cancellation vs. Support) in the intake form.
+	Problem: Descriptions contain irrelevant noise (dates, tweets, sighs)., Recommendation: Implement guided prompts that only accept relevant fields (reason, affected feature).
+	Problem: Cancellation threats are tacked on after generic support requests., Recommendation: Require a structured “Cancellation Reason” dropdown when Cancellation is selected.
+	Problem: Resolutions are missing or nonsensical, offering no closure., Recommendation: Enforce a QA-checked resolution template with predefined options and a one-sentence summary.
+	Problem: No mechanism to surface post-update/security issues back to product., Recommendation: Auto-tag tickets mentioning “update” or “security” and route them to Product/QC for review.
+
+Ticket Label: Product inquiry
+Ticket Label: Billing inquiry
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ticket 1
+-----------
+Description: I'm having an issue with the {product_purchased}. Please assist. The {product_purchased} will be sold after this month's month break. After the end of this month the {product_purchased} will I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.
+
+Resolution: No resolution documented
+
+Ticket 2:
+-----------
+Description: I'm having an issue with the {product_purchased}. Please assist.
+
+1-9-2015 Fixed it as per request! 2-10-2015 This is the first time we had to report a user's "error." I've already contacted customer support multiple times, but the issue remains unresolved.
+
+Resolution: Dark case always tough build experience happen girl.
+
+Ticket 3:
+-----------
+Description: I'm having an issue with the {product_purchased}. Please assist. Please make sure everyone knows who the products are. Sorry for the inconvenience. Ã¢â‚¬â€ Donald J. Trump (@realDonaldTrump) January 8, 2017
+
+The Trump campaign has The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.
+
+Resolution: No resolution documented
+
+Ticket 4:
+-----------
+Description: I'm having an issue with the {product_purchased}. Please assist.
+
+6 #6 hlm_1_9a0fe07 $1 $2 $1 $0 $0 #13161119 #17 I've checked for any available software updates for my {product_purchased}, but there are none.
+
+Resolution: No resolution documented
+
+Ticket 5:
+-----------
+Description: I'm having an issue with the {product_purchased}. Please assist. <sigh> Thanks. Now, I have to decide between getting my laptop or not! I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?
+
+Resolution: Catch front necessary rule toward student.

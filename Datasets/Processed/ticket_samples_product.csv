@@ -1,0 +1,26 @@
+Ticket ID,Customer Name,Customer Email,Customer Age,Customer Gender,Product Purchased,Date of Purchase,Month of Purchase,Year of Purchase,Month-Year of Purchase,Ticket Type,Ticket Subject,Ticket Description,Ticket Status,Resolution,Ticket Priority,Ticket Channel,First Response Time,Response Hours,Time to Resolution,Resolution Hours,Customer Satisfaction Rating,First Response Hrs,Resolution Hrs,tokens,resolution tokens
+5142,Robert Williams,goodwintimothy@example.com,54,Male,Autodesk AutoCAD,2021-01-17,Jan,2021,Jan-2021,Product inquiry,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+Solutions
+
+Cake and Basket, The Whole Meal:
+
+You don't need to be concerned about your eggs being in shape and tasting I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,No resolution documented,Low,Social media,2023-06-01 09:16:00,9.266666666662786,2023-06-01 11:17:00,0.0,2.991332611050921,9.266666666666667,11.283333333333333,"['issue', 'please', 'assist', 'solutions', 'cake', 'basket', 'whole', 'meal', 'need', 'concerned', 'eggs', 'shape', 'tasting', 'recently', 'updated', 'firmware', 'issue', 'started', 'happening', 'afterward', 'could', 'related', 'update']","['resolution', 'documented']"
+957,Jason Page,sanchezbobby@example.org,64,Other,Sony Xperia,2021-03-16,Mar,2021,Mar-2021,Product inquiry,Network problem,"There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution? I know that when my old app crashes sometimes, it just keeps restarting. This problem started occurring after the recent software update. I haven't made any other changes to the device.",Closed,Base low change create north.,Medium,Social media,2023-06-01 00:22:00,0.3666666666395031,2023-06-01 07:52:00,7.866666666639503,1.0,0.36666666666666664,7.866666666666667,"['seems', 'glitch', 'software', 'freezes', 'frequently', 'making', 'difficult', 'use', 'please', 'provide', 'solution', 'know', 'old', 'app', 'crashes', 'sometimes', 'keeps', 'restarting', 'problem', 'started', 'occurring', 'recent', 'software', 'update', 'made', 'changes', 'device']","['base', 'low', 'change', 'create', 'north']"
+3913,Abigail Lee,mcmahonrichard@example.net,60,Female,Amazon Kindle,2020-01-30,Jan,2020,Jan-2020,Product inquiry,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+If you're interested in having a review here, please go here for the link.
+
+Share This Page: I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Closed,Available lawyer increase to computer prepare fall.,High,Email,2023-06-01 18:52:00,18.86666666669771,2023-06-01 20:24:00,20.399999999965075,5.0,18.866666666666667,20.4,"['issue', 'please', 'assist', 'interested', 'review', 'please', 'go', 'link', 'share', 'page', 'noticed', 'issue', 'occurs', 'consistently', 'use', 'specific', 'feature', 'application']","['available', 'lawyer', 'increase', 'computer', 'prepare', 'fall']"
+2444,Jacob Alexander,porterbobby@example.org,21,Male,Canon EOS,2021-06-18,Jun,2021,Jun-2021,Product inquiry,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+The price of the product is $18.99 USD.
+
+The product may need to be filled out to validate your purchase. You may need to I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Pending Customer Response,No resolution documented,Critical,Social media,2023-06-01 19:31:00,19.516666666720994,2023-06-01 11:17:00,0.0,2.991332611050921,19.516666666666666,11.283333333333333,"['issue', 'please', 'assist', 'price', 'product', 'usd', 'product', 'may', 'need', 'filled', 'validate', 'purchase', 'may', 'need', 'unable', 'find', 'option', 'perform', 'desired', 'action', 'could', 'please', 'guide', 'steps']","['resolution', 'documented']"
+2717,Christopher Patrick,kennethjones@example.org,44,Male,HP Pavilion,2021-10-27,Oct,2021,Oct-2021,Product inquiry,Peripheral compatibility,"I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it?
+
+Answer:
+
+Log into your account name and password.
+
+Click on the I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Pending Customer Response,No resolution documented,High,Email,2023-06-01 00:00:00,0.0,2023-06-01 11:17:00,0.0,2.991332611050921,0.0,11.283333333333333,"['facing', 'issues', 'logging', 'account', 'says', 'account', 'locked', 'unlock', 'answer', 'log', 'account', 'name', 'password', 'click', 'followed', 'online', 'tutorials', 'community', 'forums', 'troubleshoot', 'issue', 'luck', 'far']","['resolution', 'documented']"
