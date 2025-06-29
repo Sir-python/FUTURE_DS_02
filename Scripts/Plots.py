@@ -1,23 +1,23 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 def plot_monthly_ticket_volume(df):
+    df['Month-Year of Purchase'] = pd.to_datetime(df['Month-Year of Purchase'], format='%b-%Y')  # adjust if your format differs
+
     monthly = (
         df.groupby("Month-Year of Purchase")
-            .agg(
-                ticket_count = ("Ticket ID", "count"), 
-                avg_response_hrs = ("First Response Hrs", "mean")
-        ).reset_index()
+        .agg(
+            ticket_count=("Ticket ID", "count"),
+            avg_response_hrs=("First Response Hrs", "mean")
+        ).sort_index().reset_index()
     )
+
+    monthly['Month-Year'] = monthly['Month-Year of Purchase'].dt.strftime('%b %Y')
+
     fig, ax1 = plt.subplots(figsize=(12, 8))
-    # Plot Ticket Count
-    ax1.plot(
-        monthly['Month-Year of Purchase'],
-        monthly['ticket_count'],
-        marker='o', markersize=8, linewidth=2,
-        label='Ticket Count'
-    )
+    ax1.plot(monthly['Month-Year'], monthly['ticket_count'], marker='o', markersize=8, linewidth=2, label='Ticket Count')
     ax1.set_xlabel('Month-Year', fontsize=12)
     ax1.set_ylabel('Ticket Count', fontsize=12)
     ax1.tick_params(axis='x', labelrotation=45, labelsize=10)
@@ -25,18 +25,20 @@ def plot_monthly_ticket_volume(df):
 
     ax2 = ax1.twinx()
     ax2.plot(
-        monthly['Month-Year of Purchase'],
-        monthly['avg_response_hrs'],
-        marker='s', markersize=8, linewidth=2,
-        linestyle='--', color='orange',
+        monthly['Month-Year'], 
+        monthly['avg_response_hrs'], 
+        marker='s', 
+        markersize=8, 
+        linewidth=2, 
+        linestyle='--', 
+        color='orange', 
         label='Avg First Response (hrs)'
     )
-    # Title and legend
+
     plt.title('Monthly Ticket Volume & Avg First Response', fontsize=14)
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
     ax1.legend(lines1 + lines2, labels1 + labels2, loc='upper left')
-
     plt.tight_layout()
     plt.show()
 
@@ -165,4 +167,37 @@ def root_cause_heatmap(df):
     plt.ylabel("Root Cause")
     plt.xlabel("Ticket Type")
     plt.tight_layout()
+    plt.show()
+
+def ticket_volume_by_priority(df):
+    priority_summary = (
+    df.groupby("Ticket Priority").agg(
+            ticket_count=("Ticket ID", "count"),
+            avg_resolution_hrs=("Resolution Hrs", "mean")
+        ).reset_index()
+    )
+    priority_summary = priority_summary.sort_values("ticket_count", ascending=False)
+
+    x = np.arange(len(priority_summary))
+    width = 0.35
+    fig, ax1 = plt.subplots(figsize=(8, 8))
+
+    # Ticket volume bars
+    bars1 = ax1.bar(x - width/2, priority_summary["ticket_count"], width, label="Ticket Count", color="#4E79A7")
+    ax1.set_xlabel("Ticket Priority")
+    ax1.set_ylabel("Ticket Count")
+    ax1.set_xticks(x)
+    ax1.set_xticklabels(priority_summary["Ticket Priority"])
+    ax1.tick_params(axis='x')
+
+    # Secondary axis for average resolution
+    ax2 = ax1.twinx()
+    bars2 = ax2.bar(x + width/2, priority_summary["avg_resolution_hrs"], width, label="Avg Resolution Hrs", color="#F28E2B")
+    ax2.set_ylabel("Avg Resolution Time (hrs)")
+    plt.title("Ticket Volume & Avg Resolution Time by Priority")
+    fig.legend(loc="upper center", bbox_to_anchor=(0.5, 1), bbox_transform=ax1.transAxes, ncol=2)
+    ax1.set_axisbelow(True)
+    ax1.grid(True, axis='y', linestyle='--', alpha=0.5)
+    ax1.grid(True, axis='x', linestyle='--', alpha=0.5)
+    fig.tight_layout(rect=(0, 0, 1, 0.95))
     plt.show()
